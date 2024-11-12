@@ -1,0 +1,40 @@
+/* --- N A V B A R   C A T E G O R I A S --- */
+#navbar-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+/* CheckBox Categorias */
+.form-check {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-check-input {
+  padding: 0;
+  margin: 0;
+}
+.form-check-input:checked {
+  background-color: orangered;
+  border-color: orangered;
+}
+.form-check-input:focus {
+  border-color: rgb(249, 154, 119);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(255, 160, 125);
+}
+
+.form-check .form-check-input {
+  float: left;
+  margin-left: -2em;
+}
+
+.form-check-input {
+  width: 1.8em;
+  height: 1.8em;
+}

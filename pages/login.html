@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <title>Pimienta y Sal | Login</title>
+</head>
+<body class="h-100 bg-opacity-10" id="body-login">
+  <main class="container" id="main-login">
+    <div class="row justify-content-center align-content-center">
+      <div class="col-12 col-md-4 col-xl-3">
+        <div class="form">
+          <form id="login-form">
+            <div class="imagen text-center">
+              <img class="img-fluid w-25" src="../img/logo.png" alt="">
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="usuario">Usuario</label>
+              <input type="text" class="form-control text-center is-invalid" id="usuario" placeholder="Usuario ...">
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="password">Password</label>
+              <input type="password" class="form-control text-center is-invalid" id="password" placeholder="Password">
+            </div>
+
+            <div class="text-end mt-3">
+              <button type="submit" class="btn btn-outline-dark" id="login-btn" disabled>Enviar</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/global.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

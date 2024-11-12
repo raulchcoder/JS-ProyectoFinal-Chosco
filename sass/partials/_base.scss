@@ -1,0 +1,41 @@
+/* Variables */
+$color-marron: #9f5730;
+$color-naranja: #e68814;
+/* Clases Globles */
+.text-marron {
+  color: $color-marron;
+}
+
+.text-naranja {
+  color: $color-naranja;
+}
+
+.bg-light2 {
+  background-color: #eceff1;
+}
+
+.bg-naranja {
+  background-color: $color-naranja;
+}
+
+.bg-marron {
+  background-color: $color-marron;
+  color: white;
+}
+.btn-comprar:hover {
+  color: #cd5718;
+  background-color: none;
+  border-color: $color-marron;
+}
+
+.bg-gris {
+  background-color: #d7d9d8;
+}
+
+body {
+  background: url(../img/bg-pimienta.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

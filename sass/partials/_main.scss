@@ -1,0 +1,41 @@
+#main {
+  .card {
+    min-height: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card-footer {
+    display: flex;
+
+    &__precio {
+      margin: auto;
+      margin-left: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &__medida {
+      display: block;
+      margin: auto;
+      border-radius: 0.2rem;
+    }
+  }
+  img.card-img-top {
+    height: 18rem;
+    object-fit: cover;
+    object-position: center;
+  } /* img */
+}
+
+@media (width >= 768px) {
+  #main {
+    .card-footer {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    img.card-img-top {
+      height: 12rem;
+    } /* img */
+  }
+}

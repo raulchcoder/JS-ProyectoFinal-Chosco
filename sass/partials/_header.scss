@@ -1,0 +1,61 @@
+@use "./base" as v;
+
+/* --- H E A D E R --- */
+.header {
+  background-color: white;
+  padding: 0.5rem;
+  display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  &__logo {
+    margin: auto;
+    img {
+      width: 2rem;
+    }
+  }
+  &__titulo {
+    padding: 0;
+    margin: 0;
+    h2 {
+      display: none;
+    }
+  }
+
+  &__carrito {
+    text-align: end;
+    &-cantidad {
+      margin-left: 0.5rem;
+      padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+      background: orangered;
+      border-radius: 0.3rem;
+      color: white;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    .fa-cart-shopping {
+      font-size: 2rem;
+      color: v.$color-naranja;
+    }
+    .fa-user-tie {
+      font-size: 2rem;
+    }
+    #carrito-cantidad {
+      margin-left: -0.9rem;
+      margin-top: 0.6rem;
+      padding: 0.1rem 0.3rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .header {
+    &__titulo {
+      h2 {
+        display: block;
+        font-size: 2rem;
+      }
+    }
+  } /* .header */
+}

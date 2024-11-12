@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <title>Pimienta y Sal | PRODUCTOS</title>
+</head>
+<body>
+  <header class="header-principal" id="header-productos">
+    <section class="header">
+      <div class="header__logo">
+        <img src="../img/logo.png" alt="logo de pimienta">
+      </div>
+      <div class="header__titulo">
+        <h2 class="text-center">Productos</h2>
+      </div>
+      <div class="header__carrito">
+        <a href="#" class="btn position-relative" id="btn-logout">
+          <i class="fas fa-sign-out-alt"></i> Salir
+        </a>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand m-auto d-md-none fw-bold" href="#">Productos</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+          <ul class="navbar-nav" id="navbar-contenedor">
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="../index.html">
+                <i class="fa-solid fa-house fa-beat"></i> Inicio
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="./categorias.html">
+                <i class="fa-solid fa-list-check fa-beat text-primary"></i> Categorias
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="./carrito.html">
+                <i class="fa-solid fa-cart-shopping fa-beat text-marron"></i> Carrito
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container main" id="main-productos">
+    <div class="row justify-content-center" id="row-productos">
+      <div class="col-12 col-lg-10 bg-white pt-4 pb-2" id="col-productos">
+        <div class="text-end mb-4">
+          <button class="btn btn-sm btn-primary" id="btn-crear">Nuevo Producto</button>
+        </div>
+        <table class="table table-hover table-bordered" id="tabla-productos">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">Nombre</th>
+              <th scope="col" class="text-center">Detalle</th>
+              <th scope="col" class="text-center">Precio</th>
+              <th scope="col" class="text-center">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- La info se agrega desde JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="modal fade" id="modal" tabindex="-1" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-titulo">Nuevo Producto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-2">
+                  <label for="nombre" class="col-form-label">Nombre:</label>
+                  <input type="text" class="form-control bg-light fw-bold" id="nombre">
+                </div>
+                <div class="mb-2">
+                  <label for="detalle" class="col-form-label">Detalle:</label>
+                  <input type="text" class="form-control bg-light fw-bold" id="detalle">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="mb-2">
+                  <label for="precio" class="col-form-label">Precio: $</label>
+                  <input type="text" class="form-control bg-light fw-bold" id="precio">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="mb-2">
+                  <label for="categoria" class="col-form-label">Categoria:</label>
+                  <select class="form-select bg-light fw-bold" aria-label=".form-select-sm example" id="categorias">
+                    <!-- Desde JS -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-12 bg-light">
+                <label for="precios">Formatos y precio:</label><button class="btn btn-sm btn-primary"
+                  id="btn-precios">Agregar</button>
+                <div class="mt-2 d-none" id="divPrecios">
+                  <table>
+                    <tr>
+                      <td><input class="form-control" type="text" id="formatoMedida"></td>
+                      <td><input class="form-control" type="text" id="formatoInfo"></td>
+                      <td><input class="form-control" type="text" id="formatoPrecio"></td>
+                      <td><button class="btn btn-sm" id="formatoGuardar" data-id="">OK</button></td>
+                    </tr>
+                  </table>
+                </div>
+                <table class="table table-bordered mt-3" id="tabla-precios">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-center bg-info-subtle">Medida</th>
+                      <th scope="col" class="text-center bg-info-subtle">Info</th>
+                      <th scope="col" class="text-center bg-info-subtle">Precio</th>
+                      <th scope="col" class="text-center bg-info-subtle">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Desde JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-12 col-md-5 mb-3">
+                <img class="img-fluid" src="" alt="imagen del producto" id="imagen">
+              </div>
+              <div class="col-12">
+                <input id="selImagen" accept="image/*" type="file" class="file">
+                <input type="text" class="d-none" id="imagenTemp">
+              </div>
+
+            </div> <!-- .row -->
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btn-guardar">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/global.js"></script>
+  <script src="../js/productos.js"></script>
+</body>
+</html>

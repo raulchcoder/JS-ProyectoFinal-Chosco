@@ -1,0 +1,140 @@
+.carrito__item {
+  // * {
+  //   padding: 0;
+  //   margin: 0;
+  // }
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 0.05rem solid gainsboro;
+  // display: flex;
+  .carrito__img {
+    background-color: white;
+    // width: 8rem;
+    width: 100%;
+    // align-self: center;
+    img {
+      display: block;
+      height: 10rem;
+      // min-width: 100%;
+      width: 16rem;
+      object-fit: cover;
+      object-position: center;
+      margin: auto;
+    }
+  }
+
+  .carrito__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .carrito__titulo {
+      padding: 0.2rem;
+      text-align: center;
+      border-bottom: 0.05rem solid gainsboro;
+    }
+  }
+  .carrito__botones {
+    height: 100%;
+    padding: 0.2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr; //repeat(4, 1fr);
+    justify-items: center;
+    align-content: center;
+    // column-gap: 0.8rem;
+    small {
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+
+  .carrito__cantidad span {
+    font-weight: bold;
+  }
+  .carrito__precio {
+    // min-width: 4rem;
+    text-align: end;
+  }
+  .carrito__quitar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .fa-solid {
+      font-size: 1.2rem;
+    }
+  }
+} /* .carrito__item */
+
+.col-botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__derecha {
+    background: greenyellow;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    .btn {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+  &__total {
+    padding: 0 1rem;
+    text-align: center;
+    span {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+/* MEDIAS */
+@media (width >= 500px) {
+  .carrito__item {
+    display: flex;
+    .carrito__img {
+      width: 8rem;
+      // align-self: center;
+      img {
+        display: block;
+        height: 100%;
+        // height: 6rem;
+        // min-width: 100%;
+        // object-fit: cover;
+        // object-position: center;
+      }
+    }
+  }
+}
+
+@media (width >= 992px) {
+  .carrito__item {
+    // margin: 1.5rem;
+    margin-bottom: 1rem;
+    .carrito__botones {
+      column-gap: 0.6rem;
+    }
+    .carrito__img {
+      img {
+        max-height: 5rem;
+      }
+    }
+    .carrito__body {
+      flex-direction: row;
+      align-items: center;
+      .carrito__titulo {
+        flex: 1;
+        border-bottom: none;
+      }
+    }
+    .carrito__precio {
+      margin: 0 0.3rem;
+    }
+    .btn-sm {
+      scale: 1.5;
+      // margin: 0 0.2rem;
+    }
+  }
+}

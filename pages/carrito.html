@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/app.css">
+   <title>Pimienta y Sal | Carrito</title>
+</head>
+<body>
+   <header class="header-principal">
+      <section class="header">
+         <div class="header__logo">
+            <img src="../img/logo.png" alt="logo de pimienta">
+         </div>
+         <div class="header__titulo">
+            <h2 class="text-center">Mi Carrito</h2>
+         </div>
+         <div class="header__carrito text-center">
+            <a href="../" class="btn position-relative text-marron">
+               <i class="fa-solid fa-2xl fa-basket-shopping"></i>
+               <strong>Seguir</strong>
+            </a>
+         </div>
+      </section>
+
+      <nav class="navbar navbar-expand-md bg-body-tertiary d-md-none">
+         <div class="container">
+            <a class="navbar-brand m-auto d-md-none fw-bold" href="#">Mi Carrito</a>
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+               <ul class="navbar-nav" id="navbar-contenedor">
+
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <main class="container main" id="main-carrito">
+      <div class="row justify-content-center" id="row-productos">
+         <div class="col-12 col-md-10 col-lg-8 bg-white py-1" id="col-productos">
+            <!-- El contenido se carga desde JS -->
+         </div>
+         <div class="col-12 col-md-10 col-lg-8 mb-4 bg-white py-1" id="col-botones">
+            <div class="col-botones">
+               <div class="btn-group" role="group" aria-label="Basic example">
+                  <a type="button" href="../" class="btn btn-sm btn-outline-secondary" id="btn-seguir">
+                     Seguir <i class="fa-solid fa-basket-shopping"></i>
+                  </a>
+                  <a type="button" class="btn btn-sm btn-outline-danger" id="btn-vaciar">
+                     <i class="fa-solid fa-trash-can"></i> Carrito
+                  </a>
+               </div>
+               <div class="col-botones__derecha">
+                  <a href="#" class="btn btn-sm btn-primary btn__pagar" id="btn-pagar">
+                     Enviar <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <span class="col-botones__total">Total $ <span id="total"></span></span>
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </main>
+
+   <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="800">
+         <div class="toast-header">
+            <!-- <img src="..." class="rounded me-2" alt="..."> -->
+            <strong class="me-auto"></strong>
+            <!-- <small>11 mins ago</small> -->
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+         </div>
+         <div class="toast-body p-3">
+            <strong id="toast-texto">Producto agregado...</strong>
+         </div>
+      </div>
+   </div>
+
+   <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="../js/global.js"></script>
+   <script src="../js/carrito.js"></script>
+</body>
+</html>

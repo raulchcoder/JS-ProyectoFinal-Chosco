@@ -1,0 +1,12 @@
+#main-login {
+  height: 100vh;
+
+  .row {
+    min-height: 100vh;
+  }
+  form {
+    padding: 1.5rem;
+    box-shadow: 3px 7px 12px 3px rgba(20, 20, 20, 0.5);
+    background: white;
+  }
+}

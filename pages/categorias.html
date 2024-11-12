@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <title>Pimienta y Sal | Categorias</title>
+</head>
+<body class="">
+  <header class="header-principal" id="header-categorias">
+    <section class="header">
+      <div class="header__logo">
+        <img src="../img/logo.png" alt="logo de pimienta">
+      </div>
+      <div class="header__titulo">
+        <h2 class="text-center">Categorias</h2>
+      </div>
+      <div class="header__carrito">
+        <a href="#" class="btn position-relative" id="btn-logout">
+          <i class="fas fa-sign-out-alt"></i> Salir
+        </a>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand m-auto d-md-none fw-bold" href="#">Categorias</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+          <ul class="navbar-nav" id="navbar-contenedor">
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="../index.html">
+                <i class="fa-solid fa-house fa-beat"></i> Inicio
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="./productos.html">
+                <i class="fa-solid fa-list-check fa-beat text-primary"></i> Productos
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="text-decoration-none text-dark" href="./carrito.html">
+                <i class="fa-solid fa-cart-shopping fa-beat text-marron"></i> Carrito
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main" id="main-categoria">
+    <div class="row justify-content-center" id="row-categorias">
+      <div class="col-12 col-md-6 col-lg-5 bg-white pt-3 pb-1" id="col-categorias">
+        <div class="text-end mb-4">
+          <button class="btn btn-sm btn-primary" id="btn-crear">Nueva Categoría</button>
+        </div>
+        <table class="table table-hover table-bordered" id="tabla-categorias">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">Nombre</th>
+              <th scope="col" class="text-center">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- La info se agrega desde JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="modal fade" id="modal" tabindex="-1" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-titulo">Nueva Categoría</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="col-form-label">Nombre:</label>
+              <input type="text" class="form-control bg-light" id="nombre">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btn-guardar">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/global.js"></script>
+  <script src="../js/categorias.js"></script>
+</body>
+</html>

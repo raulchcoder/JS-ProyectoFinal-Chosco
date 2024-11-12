@@ -1,0 +1,11 @@
+#btn-precios {
+  --bs-btn-padding-y: 0.08rem;
+  --bs-btn-padding-x: 0.25rem;
+  --bs-btn-font-size: 0.75rem;
+  margin-left: 1rem;
+}
+#header-productos {
+  .navbar-nav > li > a:hover {
+    font-weight: bold;
+  }
+}
