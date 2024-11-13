@@ -17,20 +17,6 @@ const CATEGORIA = function (id, nombre) {
   this.nombre = nombre;
 };
 
-/* Creando Categorias */
-// const CATEGORIAS = [
-//   new CATEGORIA(1, "Empanadas"),
-//   new CATEGORIA(2, "Papas"),
-//   new CATEGORIA(3, "Minutas"),
-//   new CATEGORIA(4, "Menú"),
-//   new CATEGORIA(5, "Pizzas"),
-//   new CATEGORIA(6, "Sándwiches"),
-//   new CATEGORIA(7, "Hamburguesas"),
-//   new CATEGORIA(8, "Postres"),
-//   new CATEGORIA(9, "Bebidas"),
-//   new CATEGORIA(10, "Promo"),
-// ];
-
 let CATEGORIAS = [];
 
 /* Cargar Categorias */
@@ -94,97 +80,6 @@ const PRODUCTO = function (id, nombre, detalle, precio, img, categoria_id, preci
   this.img = img;
   this.categoria_id = categoria_id;
 };
-
-/* Crear Productos */
-// const PRODUCTOS = [
-//   new PRODUCTO(1, "Empanada de CARNE", "1/2 doc $ 6000, Unidad $ 1000", 12000, "empanadas.jpg", 10, [
-//     { id: 1, medida: "Doc", info: "Por docena", precio: 12000 },
-//     { id: 2, medida: "1/2 Doc", info: "Por 1/2 docena", precio: 6000 },
-//     { id: 3, medida: "Unidad", info: "Por unidad", precio: 1200 },
-//   ]),
-//   new PRODUCTO(2, "Empanada de POLLO", "1/2 doc $ 6000, Unidad $ 1000", 12000, "empanada_pollo.jpg", 1, [
-//     { id: 1, medida: "Doc", info: "Por docena", precio: 12000 },
-//     { id: 2, medida: "1/2 Doc", info: "Por 1/2 docena", precio: 6000 },
-//     { id: 3, medida: "Unidad", info: "Por unidad", precio: 1200 },
-//   ]),
-//   new PRODUCTO(3, "Empanada de JAMÓN y QUESO", "1/2 doc $ 6000, Unidad $ 1000", 12000, "empanada_jamon_queso.jpg", 1, [
-//     { id: 1, medida: "Doc", info: "Por docena", precio: 12000 },
-//     { id: 2, medida: "1/2 Doc", info: "Por 1/2 docena", precio: 6000 },
-//     { id: 3, medida: "Unidad", info: "Por unidad", precio: 1200 },
-//   ]),
-//   new PRODUCTO(4, "Empanada de ÁRABES", "(*) Solo día Jueves", 12000, "empanada_arabe.jpg", 1),
-//   /* Categoria 2 */
-//   new PRODUCTO(10, "Papa fritas BASTÓN", "Porción chica $ 2500", 5000, "papas_fritas.jpeg", 2, [
-//     { id: 1, medida: "Grande", info: "Porción Grande", precio: 5000 },
-//     { id: 2, medida: "Chica", info: "Porción Chica", precio: 2500 },
-//   ]),
-//   new PRODUCTO(11, "Papa NOISE", "Porción chica $ 3000", 6000, "papas_noisette.jpg", 10, [
-//     { id: 1, medida: "Grande", info: "Porción Grande", precio: 5000 },
-//     { id: 2, medida: "Chica", info: "Porción Chica", precio: 2500 },
-//   ]),
-//   /* Categoria 3 */
-//   new PRODUCTO(15, "Milanesa con guarnición", "", 7500, "milanesa_ensalada_mix.jpg", 3),
-//   new PRODUCTO(16, "Milanesa napolitana con guarnición", "", 9000, "milanesa_napolitana2.jpg", 3),
-//   new PRODUCTO(17, "Milanesa caballo con guarnición", "", 9000, "milanesa_caballo.jpg", 3),
-//   new PRODUCTO(18, "Milanesa a la suiza", "", 9000, "milanesa_suiza.jpg", 3),
-//   new PRODUCTO(19, "Milanesa de merluza con guarnición", "", 7000, "milanesa_merluza.jpg", 3),
-//   new PRODUCTO(20, "Milanesa de cerdo con guarnición", "", 7000, "milanesa_cerdo.jpg", 3),
-//   new PRODUCTO(21, "Pata muslo al horno con guarnición", "", 6000, "pata_muslo.jpg", 3),
-//   new PRODUCTO(22, "Bondiola de cerdo con guarnición", "", 7000, "bondiola_cerdo.jpg", 3),
-//   new PRODUCTO(23, "Bife a la criolla con guarnición", "", 7500, "bife_criolla.jpg", 3),
-//   /* Categoria 4 */
-//   new PRODUCTO(30, "Tallarines", "", 6000, "tallarines.jpg", 4),
-//   new PRODUCTO(31, "Ñoquis", "", 6000, "nioquis.jpg", 4),
-//   new PRODUCTO(32, "Albóndigas con puré", "", 6000, "albondiga_pure.jpg", 4),
-//   new PRODUCTO(33, "Tortilla de papa con ensalada", "", 6000, "tortilla_papa.jpg", 4),
-//   new PRODUCTO(34, "Pastel de papa", "", 6000, "pastel_papa.jpg", 4),
-//   new PRODUCTO(35, "Canelones", "", 6000, "canelones.jpg", 4),
-//   new PRODUCTO(36, "Guiso de lentejas", "", 6000, "guiso_lentejas.jpg", 4),
-//   new PRODUCTO(37, "Guiso de garbanzos", "", 6000, "guiso_garbanzos.jpg", 4),
-//   new PRODUCTO(38, "Cazuela de mondongo y garbanzo", "", 6000, "cazuela_mondongo.jpg", 4),
-//   new PRODUCTO(39, "Arroz con salsa bolognesa", "", 6000, "arroz_salsa_bolognesa.jpg", 10),
-//   /* Categoria 5 */
-//   new PRODUCTO(45, "Pizza Mozzarella", "", 10000, "default.jpg", 10, [
-//     { id: 1, medida: "", info: "", precio: 12000 },
-//     { id: 2, medida: "1/2", info: "1/2 Pizza", precio: 6000 },
-//   ]),
-//   new PRODUCTO(46, "Pizza Mozzarella con 4 huevos fritos", "", 12000, "default.jpg", 5),
-//   new PRODUCTO(47, "Pizza Mozzarella con atún", "", 12000, "default.jpg", 5),
-//   new PRODUCTO(48, "Pizza Especial de jamón y queso con morrón", "", 12000, "default.jpg", 5),
-//   new PRODUCTO(49, "Pizza Especial de jamón y queso con huevo", "", 12000, "default.jpg", 5),
-//   new PRODUCTO(50, "Pizza Fugazzeta", "", 13000, "default.jpg", 5),
-//   new PRODUCTO(51, "Pizza Napolitana", "", 13500, "default.jpg", 5),
-//   new PRODUCTO(52, "Pizza Napolitana con atún", "", 15000, "default.jpg", 5),
-//   new PRODUCTO(53, "Pizza Calabresa", "", 13000, "pizza_calabresa.jpg", 5),
-//   new PRODUCTO(54, "Pizza 4 Queso", "", 13000, "default.jpg", 5),
-//   new PRODUCTO(55, "Pizza Especial roquefort", "", 13000, "default.jpg", 5),
-//   new PRODUCTO(56, "Pizza Campestre con 4 huevos", "", 15000, "default.jpg", 5),
-//   new PRODUCTO(57, "Pizza Campestre con 6 huevos", "", 16000, "default.jpg", 5),
-//   /* Categoria 6 */
-//   new PRODUCTO(65, "Sandwich de Milanesa Simple", "Tomate y lechuga", 8000, "default.jpg", 6),
-//   new PRODUCTO(
-//     66,
-//     "Sandwich de Milanesa Completo",
-//     "Tomate y lechuga, jamón, queso y huevo planchado",
-//     10000,
-//     "default.jpg",
-//     6
-//   ),
-//   /* Categoria 7 */
-//   new PRODUCTO(70, "Hamburguesa Simple", "Tomate y lechuga", 6000, "hamburguesa_simple.jpg", 7),
-//   new PRODUCTO(71, "Hamburguesa Simple JyQ", "Jamón y queso", 6000, "default.jpg", 7),
-//   new PRODUCTO(72, "Hamburguesa Completa", "Lechuga, tomate, jamón, queso y huevo planchado", 7000, "default.jpg", 7, [
-//     { id: 1, medida: "Con papas", info: "Con papas", precio: 7500 },
-//     { id: 2, medida: "Sin papas", info: "Sin papas", precio: 7000 },
-//   ]),
-
-//   new PRODUCTO(74, "Hamburguesa Completa DOBLE", "", 11500, "default.jpg", 7, [
-//     { id: 1, medida: "Con papas", info: "Con papas", precio: 11500 },
-//     { id: 2, medida: "Sin papas", info: "Sin papas", precio: 11000 },
-//   ]),
-
-//   /* Categoria 8 */
-// ];
 
 let PRODUCTOS = [];
 
