@@ -31,14 +31,6 @@
   background-color: #d7d9d8;
 }
 
-body {
-  background: url(../img/bg-pimienta.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 /* --- H E A D E R --- */
 .header {
   background-color: white;
