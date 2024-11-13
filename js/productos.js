@@ -236,6 +236,9 @@ function crearObjPreciosDesdeTabla() {
 
 /* === U S O   D E    A P I === */
 async function actualizarProductoEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
+
   try {
     const response = await fetch(`${URL_API}/productos`, {
       method: "PATCH",
@@ -255,6 +258,9 @@ async function actualizarProductoEnBD(data) {
   }
 }
 async function eliminarProductoEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
+
   try {
     const response = await fetch(`${URL_API}/productos/${data}`, {
       method: "DELETE",
@@ -274,6 +280,9 @@ async function eliminarProductoEnBD(data) {
   }
 }
 async function guardarProductoEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
+
   try {
     const response = await fetch(`${URL_API}/productos`, {
       method: "POST",

@@ -98,6 +98,8 @@ function setEstilosModalSegunAccion(accion) {
 
 /* === U S O   D E    A P I === */
 async function actualizarCategoriaEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
   try {
     const response = await fetch(`${URL_API}/categorias`, {
       method: "PATCH",
@@ -117,6 +119,9 @@ async function actualizarCategoriaEnBD(data) {
   }
 }
 async function eliminarCategoriaEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
+
   try {
     const response = await fetch(`${URL_API}/categorias/${data}`, {
       method: "DELETE",
@@ -136,6 +141,9 @@ async function eliminarCategoriaEnBD(data) {
   }
 }
 async function guardarCategoriaEnBD(data) {
+  let session = JSON.parse(localStorage.getItem("session"));
+  data = { ...data, ...session };
+
   try {
     const response = await fetch(`${URL_API}/categorias`, {
       method: "POST",
