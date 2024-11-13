@@ -324,12 +324,12 @@ async function inicializacion() {
   ordenarCategoriasPorNombre(CATEGORIAS);
   cargarCategorias();
 
-  PRODUCTOS = await getProductosDesdeAPI();
+  // PRODUCTOS = await getProductosDesdeAPI();
 
   /* En este función se puede especificar que categoria se carga por defecto,
   si se pasa un array vacio mostrara una imagen con el logo de la app.  
   */
-  cargarProductos(productosPorCategoria([10]));
+  // cargarProductos(productosPorCategoria([10]));
 
   // getCarritoDesdeLocalStorage();
   // actualizarCantidadCarrito();
