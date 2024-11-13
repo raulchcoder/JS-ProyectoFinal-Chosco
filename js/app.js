@@ -331,8 +331,8 @@ async function inicializacion() {
   */
   cargarProductos(productosPorCategoria([10]));
 
-  getCarritoDesdeLocalStorage();
-  actualizarCantidadCarrito();
+  // getCarritoDesdeLocalStorage();
+  // actualizarCantidadCarrito();
 }
 
 // eliminarCarritoEnLocalStorage();
